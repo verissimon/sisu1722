@@ -1,4 +1,6 @@
 /sisu
 /reduzido
+/transformado
 /microdados_*
 /.venv
+.env

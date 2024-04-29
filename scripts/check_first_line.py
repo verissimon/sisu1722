@@ -1,6 +1,9 @@
 import os
 
-folder_path = './sisu/2022'  
+folder_path = './sisu/2017'  
+# folder_path = './transformado/2018'  
+# folder_path = './microdados_educacao_superior_2022/dados'  
+print(os.listdir(folder_path))
 # lê primeira linha com colunas de cada csv
 for filename in os.listdir(folder_path):
     if filename.endswith('.csv'):
@@ -8,7 +11,9 @@ for filename in os.listdir(folder_path):
         with open(file_path, 'r', encoding='ISO-8859-1') as file:
             first_line = file.readline()
             print(filename)
-            print(first_line, "\n")  
+            print(first_line, "\n")
+            second_line = file.readline()
+            print(second_line, "\n")
             
 ###
 # utf-8 sep=";": 
