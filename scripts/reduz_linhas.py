@@ -5,14 +5,14 @@ import random
 
 random.seed(42)
 
-ANO = "2017"
+ANO = "2022"
 FILE = f'chamada_regular_sisu_{ANO}_2.csv'
 
-original_file_path = f'./sisu/{ANO}/{FILE}'
+original_file_path = f'./transformado/{ANO}/{FILE}'
 
 new_file_path = f'./reduzido/{ANO}/reduzido_{FILE}'
 
-num_lines_to_sample = 1000
+num_lines_to_sample = 1001
 
 sampled_lines = []
 

@@ -1,6 +1,6 @@
 import os
 
-folder_path = './sisu/2017'  
+folder_path = './transformado/2022'  
 # folder_path = './transformado/2018'  
 # folder_path = './microdados_educacao_superior_2022/dados'  
 print(os.listdir(folder_path))
