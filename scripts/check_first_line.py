@@ -1,10 +1,11 @@
 import os
 
-folder_path = './transformado/2022'  
+folder_path = './sisu/2022'  
 # folder_path = './transformado/2018'  
 # folder_path = './microdados_educacao_superior_2022/dados'  
 print(os.listdir(folder_path))
 # lê primeira linha com colunas de cada csv
+com_qt_vagas = []
 for filename in os.listdir(folder_path):
     if filename.endswith('.csv'):
         file_path = os.path.join(folder_path, filename)
@@ -15,6 +16,11 @@ for filename in os.listdir(folder_path):
             second_line = file.readline()
             print(second_line, "\n")
             
+            if "QT_VAGAS_CONCORRENCIA" in first_line:
+                com_qt_vagas.append(filename)
+                
+print(com_qt_vagas)
+
 ###
 # utf-8 sep=";": 
 # chamada_regular_sisu_2017_2.csv

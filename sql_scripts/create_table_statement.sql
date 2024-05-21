@@ -1,5 +1,5 @@
 
-CREATE TABLE IF NOT EXISTS public.chamada_regular_2022_1
+CREATE TABLE IF NOT EXISTS public.chamada_regular_2021_1
 (
     "ANO" bigint,
     "EDICAO" bigint,
@@ -58,5 +58,5 @@ CREATE TABLE IF NOT EXISTS public.chamada_regular_2022_1
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS public.chamada_regular_2017_2
+ALTER TABLE IF EXISTS public.chamada_regular_2021_1
     OWNER to postgres;
