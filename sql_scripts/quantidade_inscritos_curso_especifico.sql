@@ -1,0 +1,13 @@
+SELECT "ANO", "NOME_CURSO", "NOME_IES", "NOME_CAMPUS",
+	count(*) as "INSCRITOS"
+FROM public.chamada_regular_2018_1
+WHERE "OPCAO" = 1
+group by "ANO", "NOME_CURSO", "CODIGO_CURSO",
+	"CODIGO_IES", "NOME_IES",
+	"CODIGO_CAMPUS", "NOME_CAMPUS"
+
+-- teste
+SELECT *
+FROM public.chamada_regular_2018_1
+WHERE "CODIGO_CURSO" != 37 and "NOME_CURSO" = 'MEDICINA'
+LIMIT 100
