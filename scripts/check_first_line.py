@@ -1,8 +1,10 @@
 import os
+from pathlib import Path
 
-folder_path = './sisu/2022'  
-# folder_path = './transformado/2018'  
-# folder_path = './microdados_educacao_superior_2022/dados'  
+
+# folder_path = './sisu/2022'
+ROOT_PATH = Path(__file__).parent.parent
+folder_path = ROOT_PATH / 'transformado' / '2022'
 print(os.listdir(folder_path))
 # lê primeira linha com colunas de cada csv
 com_qt_vagas = []
@@ -13,8 +15,8 @@ for filename in os.listdir(folder_path):
             first_line = file.readline()
             print(filename)
             print(first_line, "\n")
-            second_line = file.readline()
-            print(second_line, "\n")
+            # second_line = file.readline()
+            # print(second_line, "\n")
             
             if "QT_VAGAS_CONCORRENCIA" in first_line:
                 com_qt_vagas.append(filename)

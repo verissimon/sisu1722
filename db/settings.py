@@ -13,16 +13,18 @@ class PgConnector:
         USERNAME = os.environ.get("DB_USERNAME")
         PASSWORD = os.environ.get("DB_PASSWORD")
         DB_NOME = os.environ.get("DB_NAME")
+        DB_PORT= os.environ.get("DB_PORT")
+        DB_HOST = os.environ.get("DB_HOST")
 
         self.engine: Engine = create_engine(
-            f"postgresql://{USERNAME}:{PASSWORD}@localhost:5432/{DB_NOME}"
+            f"postgresql://{USERNAME}:{PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NOME}"
         )
         self.conn = psycopg2.connect(
             database=DB_NOME,
             user=USERNAME,
             password=PASSWORD,
-            host="localhost",
-            port="5432",
+            host=DB_HOST,
+            port=DB_PORT,
         )
         self.cur = self.conn.cursor()
 
